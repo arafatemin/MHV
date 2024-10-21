@@ -1,0 +1,84 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="blog-area bg-color-1 section-padding" id="blog">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="section-title text-center mb-60">
+                        <h2 class="mb-20">Rare Disease Projects</h2>
+                        <div class="horizontal-line">
+                            <div class="top"></div>
+                            <div class="bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                {% for rare_disease in rare_diseases %}
+                    <div class="mobile-mb-30 col-xs-12 col-sm-4">
+                        <div class="single-blog clearfix mb-30 text-justify"  style="height: 650px; overflow: hidden">
+                        {% if rare_disease.url %}
+                            <a target="_blank" href="{{ rare_disease.url }}">
+                                <img style="border-radius: 5px" width="350" height="300"
+                                     src="{{ rare_disease.image.url }}"
+                                     alt="Blog Image"/>
+                            </a>
+                        {% else %}
+                            <img style="border-radius: 5px" width="350"
+                                 height="300"
+                                 src="{{ rare_disease.image.url }}"
+                                 alt="Blog Image"/>
+
+                        {% endif %}
+                        <div class="date-comment plr-20 ptb-20 clearfix">
+                            {% if rare_disease.startedDate %}
+                                <div class="left floatleft">
+                                    <h6 class="capitalize montserrat no-margin weight-regular"><i
+                                            class="zmdi zmdi-calendar"></i> {{ rare_disease.startedDate }} </h6>
+                                </div>
+                            {% else %}
+                                <div class="left floatleft">
+                                    <h6 class="capitalize montserrat no-margin weight-regular"><i
+                                            class="zmdi zmdi-calendar"></i></h6>
+                                </div>
+                            {% endif %}
+
+                            {% if rare_disease.finance %}
+                                <div class="right floatright">
+                                    <h6 class="capitalize montserrat no-margin weight-regular"><i
+                                            class="zmdi zmdi-balance"></i> {{ rare_disease.finance }}</h6>
+                                </div>
+                            {% else %}
+                                <div class="right floatright">
+                                    <h6 class="capitalize montserrat no-margin weight-regular"><i
+                                            class="zmdi zmdi-balance"></i></h6>
+                                </div>
+
+                            {% endif %}
+                        </div>
+                        <div class="text-justify contact-text text-left mb-30 align-middle" style="padding: 15px">
+                            <div class="left ">
+                                {% if rare_disease.url %}
+                                    <a target="_blank" href="{{ rare_disease.url }}">
+                                        <h3 class="capitalize">
+                                            {{ rare_disease.title }}</h3>
+                                    </a>
+                                {% else %}
+                                    <h3 class="capitalize">
+                                        {{ rare_disease.title }}</h3>
+                                {% endif %}
+                                <p><span>{{ rare_disease.description|safe }}</span></p>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    </div>
+                {% endfor %}
+
+
+                </div>
+            </div>
+    </section>
+{% endblock %}

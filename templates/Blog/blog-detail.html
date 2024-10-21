@@ -1,0 +1,89 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+
+
+    <div class="blog-details-area light-bg section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 col-text-center">
+                    <div class="single-post">
+                        <div class="img mb-60">
+                            <img src="{% static 'assets/img/blog/large.jpg' %}" alt=""/>
+                        </div>
+                        <div class="text">
+                            <h3 class="font-26 montserrat weight-medium capitalize mb-10">The standard Lorem Ipsum
+                                passage, used since the 1500s</h3>
+                            <h5 class="capitalize montserrat weight-regular no-margin">Date : <span
+                                    class="montserrat-600">30 Jun 2017</span> By <span
+                                    class="montserrat-600">Jonathon</span></h5>
+                            <p class="ptb-40">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                                voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui
+                                ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
+                                dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+                                incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                                veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid
+                                ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
+                                velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                                voluptas nulla paria</p>
+                            <div class="separate relative">
+                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                                    laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                    architecto beatae vitae dicta sunt explicabo. Nemo enim ip voluptatem quia voluptas
+                                    sit aspernatur aut odit aut fugit, sed quia consequuntur </p>
+                            </div>
+                            <ul class="mt-50 mb-40">
+                                <li>1. Maecenas nec quam quis libero malesuada eleifend.</li>
+                                <li>2. Curabitur hendrerit mauris ac lacus egestas pharetra..</li>
+                                <li>3. In vitae sapien eu tortor fermentum porttitor et a ante..</li>
+                                <li>4. Sed malesuada risus at fermentum lobortis.</li>
+                            </ul>
+                            <p class="mb-60">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et
+                                quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ip voluptatem quia voptas
+                                sit aspernatur aut odit aut fugit, sed quia consequuntur </p>
+                        </div>
+                    </div>
+                    <div class="related-post">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 mobile-mb-30">
+                                <div class="single-related-post">
+                                    <a href="light-blog-details.html"><img src="{% static 'assets/img/blog/d1.jpg' %}"
+                                                                           alt="Post Image"/></a>
+                                    <a href="light-blog-details.html">
+                                        <h4 class="capitalize montserrat no-margin mt-20 weight-regular">Suffered
+                                            alteration in some</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 mobile-mb-30">
+                                <div class="single-related-post">
+                                    <a href="light-blog-details.html"><img src="{% static 'assets/img/blog/d2.jpg' %}"
+                                                                           alt="Post Image"/></a>
+                                    <a href="light-blog-details.html">
+                                        <h4 class="capitalize montserrat no-margin mt-20 weight-regular">Suffered
+                                            alteration in some</h4>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 mobile-mb-30">
+                                <div class="single-related-post">
+                                    <a href="light-blog-details.html"><img src="{% static 'assets/img/blog/d3.jpg' %}"
+                                                                           alt="Post Image"/></a>
+                                    <a href="light-blog-details.html">
+                                        <h4 class="capitalize montserrat no-margin mt-20 weight-regular">Suffered
+                                            alteration in some</h4>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

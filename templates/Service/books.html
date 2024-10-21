@@ -1,0 +1,51 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="portfolio-details-area light-bg section-padding">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="section-title text-center mb-60">
+                    <h2 class="mb-20">Books</h2>
+                    <div class="horizontal-line">
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% for book in books %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="portfolio-description single-post text-justify">
+                            <h3 class="font-26 montserrat weight-medium capitalize">{{ book.title|title }}</h3>
+                            <p>{{ book.description|safe }} </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        {% endfor %}
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="project-gallery">
+                        <div class="row">
+                            {% for book_image in book_images %}
+                                <div class="col-xs-6 col-sm-6 col-md-6 mb-30">
+                                    <a target="_blank"
+                                       href="{{ book_image.url}}"
+                                       class="fancybox">
+                                        <img style="width: 100%; height: 100%" height="500" src="{{ book_image.image.url }}"
+                                             alt="Project Image"/>
+                                    </a>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,163 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onur Burak Dursun</title>
+    <style>
+        @keyframes growShrink {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2); /* 1.1 kat büyüme */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<!-- Bootstrap JS and dependencies -->
+
+</body>
+</html>
+
+<div id="home"></div>
+
+<header class="header-style-1 bg-color-1">
+    <div class="top clearfix">
+        <div class="header-top active-sticky ptb-50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-1 col-sm-1">
+                        <div class="left">
+                            <div class="logo">
+                                <a style="color: black; text-decoration: none; margin-top: 20px; animation: growShrink 2s infinite; float: left;"
+                                   href="{% url 'index' %}">Onur Burak <span
+                                        style="letter-spacing: 6px">Dursun</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-11 col-sm-11">
+                        <div class="right">
+                            <div class="expand-menu-open floatright">
+                                {#                                <i class="zmdi zmdi-menu"></i>#}
+                                <img class="img-responsive" style="width: 30px; height: 35px; margin-top: 5px;"
+                                     src="{% static 'assets/img/icons/menu_icon1.png' %}" alt="">
+                            </div>
+                            <nav class="mainmenu onepage-nev floatright">
+                                <ul class="clearfix">
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'about' %}">About</a></li>
+                                    <li><a href="{% url 'skill' %}">Disaster Response</a></li>
+                                    <li><a href="{% url 'service' %}">Academic</a></li>
+                                    <li><a href="{% url 'rare-diseases' %}">Rare Diseases</a></li>
+                                    <li><a href="{% url 'autism' %}">Autism</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                                    <li><a target="_blank" href="https://www.mhwpublishing.com">MHV
+                                        Publishing</a></li>
+                                    <li class="nav-item dropdown">
+                                        {% if request.langu %}
+
+                                        {% endif %}
+                                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown"
+                                           data-toggle="dropdown" aria-haspopup="true"
+                                           aria-expanded="false">
+                                            {% if request.LANGUAGE_CODE == 'en' %}
+                                                {#                                <img class="img-circle" style="width: 40px; height: 30px"#}
+                                                {#                                     src="{% static 'assets/img/flags/en.png' %}"#}
+                                                {#                                     alt="">#}
+                                                EN
+                                            {% elif request.LANGUAGE_CODE == 'tr' %}
+                                                TR
+                                            {% elif request.LANGUAGE_CODE == 'ar' %}
+                                                AR
+                                            {% else %}
+                                                RU
+                                            {% endif %}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                                            <a class="dropdown-item"
+                                               href="{% url 'set-language' 'en' %}">EN</a>
+                                            <a class="dropdown-item"
+                                               href="{% url 'set-language' 'tr' %}">TR</a>
+                                            <a class="dropdown-item"
+                                               href="{% url 'set-language' 'ru' %}">RU</a>
+                                            <a class="dropdown-item"
+                                               href="{% url 'set-language' 'ar' %}">Ar</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainmenu-expand bg-color-3">
+            <div class="close-menu">
+{#                <i class="zmdi zmdi-close-circle-o"></i>#}
+                <img class="img-responsive" style="width: 30px; color: silver; background-color: silver; height: 35px; margin-top: 5px;"
+                     src="{% static 'assets/img/icons/close-circle.svg' %}" alt="">
+
+            </div>
+            <div class="menu-logo">
+                <a style="text-decoration: none; color: whitesmoke; text-align: center; animation: growShrink 2s infinite;"
+                   href="{% url 'index' %}">Onur Burak Dursun</a>
+            </div>
+            <nav class="mainmenu-box onepage-nev">
+                <ul class="clearfix">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a></li>
+                    <li><a href="{% url 'skill' %}">Disaster Response</a></li>
+                    <li><a href="{% url 'service' %}">Academic</a></li>
+                    <li><a href="{% url 'rare-diseases' %}">Rare Diseases</a></li>
+                    <li><a href="{% url 'autism' %}">Autism</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a target="_blank" href="https://www.mhwpublishing.com">MHV Publishing</a></li>
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" id="languageDropdown"
+                           data-toggle="dropdown" aria-haspopup="true"
+                           aria-expanded="false">
+                            {% if request.LANGUAGE_CODE == 'en' %}
+                                {#                                <img class="img-circle" style="width: 40px; height: 30px"#}
+                                {#                                     src="{% static 'assets/img/flags/en.png' %}"#}
+                                {#                                     alt="">#}
+                                EN
+                            {% elif request.LANGUAGE_CODE == 'tr' %}
+                                TR
+                            {% elif request.LANGUAGE_CODE == 'ar' %}
+                                AR
+                            {% else %}
+                                RU
+                            {% endif %}
+                        </a>
+                        <div class="dropdown-menu text-center">
+                            <a class="dropdown-item" href="{% url 'set-language' 'en' %}">EN</a>
+                            <a class="dropdown-item" href="{% url 'set-language' 'tr' %}">TR</a>
+                            <a class="dropdown-item" href="{% url 'set-language' 'ru' %}">RU</a>
+                            <a class="dropdown-item" href="{% url 'set-language' 'ar' %}">Ar</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</header>
+
+
+
+
+
+
+
+
+
+
+

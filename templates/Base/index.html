@@ -1,0 +1,111 @@
+{#{% extends 'Home/base.html' %}#}
+{#{% load static %}#}
+{#{% block content %}#}
+{##}
+{#    <style>#}
+{#        @media (max-width: 768px) {#}
+{#            .bottom {#}
+{#                min-height: 1200px#}
+{#            }#}
+{#        }#}
+{#    </style>#}
+{#<section class="blog-area bg-color section-padding" id="blog">#}
+{#    <div class="bottom slider-area text-center" style="height: 730px">#}
+{##}
+{#        <div class="container">#}
+{#            {% for home in homes %}#}
+{#                <div class="row align-items-center">#}
+{#                    <div class="col-md-8 text-left">#}
+{#                        <div class="slider-text">#}
+{#                            <h2 class="font-30 weight-500 mt-30 mb-10">{{ home.name|title }}</h2>#}
+{#                            <p class="font-16 line-height-28 text-justify"#}
+{#                               style="text-decoration: none; color: #8a8a8a">#}
+{#                                {{ home.description|safe }}#}
+{#                            </p>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="col-md-4 mt-50">#}
+{#                        <div class="img-rounded img-circle img-responsive slider-img text-right img-fluid  rounded-circle mx-auto d-block">#}
+{#                            <img src="{% static 'assets/img/slider/screen_shot.png' %}" alt="Image Layer"/>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+{#{% endblock %}#}
+{##}
+
+
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+
+    <style>
+        @media (max-width: 768px) {
+            .bottom {
+                min-height: 1200px
+            }
+        }
+
+        /* İsim için tekrar eden animasyon */
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+
+    </style>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<section class="blog-area bg-color section-padding" id="blog">
+    <div class="bottom slider-area text-center" style="height: 450px">
+
+        <div class="container">
+            {% for home in homes %}
+                <div class="row align-items-center">
+                    <div class="col-md-8 text-left">
+                        <div class="slider-text">
+                            <!-- İsim (tekrar eden animasyon) -->
+                            <h2 class="font-30 weight-500  repeating-animation" data-aos="fade-right" data-aos-delay="100">{{ home.name|title }}</h2>
+                            <!-- Description -->
+                            <div data-aos="fade-right" data-aos-delay="300">
+                                <p class="font-16 line-height-28 text-justify"
+                                   style="text-decoration: none; color: #8a8a8a">
+                                    {{ home.description|safe }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Resim -->
+                    <div class="col-md-4 mt-50" data-aos="fade-left" data-aos-delay="500">
+                        <div class="img-rounded img-circle img-responsive slider-img text-right img-fluid  rounded-circle mx-auto d-block">
+                            <img src="{{home.image.url}}" alt="Image Layer"/>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>
+
+{% endblock %}
+
+
+
+

@@ -1,0 +1,57 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+<div class="portfolio-details-area light-bg section-padding">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<div class="portfolio-description single-post">
+							<h3 class="font-26 montserrat weight-medium capitalize">Portfolio Item Title</h3>
+							<p>There are many variations of passages of Lorem Ipsum available, but the majority have fered altation in some form, by injmour, or randomised words which don't look even slightlievable. Iyoare going use a passage of Lorem Ipsum, you need to be surthere isn't anything embarrassing hidden.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words </p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="portfolio-sidebar pt-45">
+							<ul>
+								<li><span>Client :</span> <p>Regal Theme</p></li>
+								<li><span>Created By :</span> <p>Héctor Nieto</p></li>
+								<li><span>Completed :</span> <p>20 Jun 2017</p></li>
+								<li><span>Skill :</span> <p>Photoshop, Indesign</p></li>
+								<li><span>Services :</span> <p>Sells, Marketing, PSD Envato, All, Charlila</p></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="project-gallery pt-80">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 mb-30">
+									<a href="{% static 'assets/img/portfolio/details/1.jpg' %}" class="fancybox">
+										<img src="{% static 'assets/img/portfolio/details/1.jpg' %}" alt="Project Image" />
+									</a>
+								</div>
+								<div class="col-xs-12 col-sm-6 mb-30">
+									<a href="{% static 'assets/img/portfolio/details/2.jpg' %}" class="fancybox">
+										<img src="{% static 'assets/img/portfolio/details/2.jpg' %}" alt="Project Image" />
+									</a>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12 col-sm-6 mobile-mb-30">
+									<a href="{% static 'assets/img/portfolio/details/3.jpg' %}" class="fancybox">
+										<img src="{% static 'assets/img/portfolio/details/3.jpg' %}" alt="Project Image" />
+									</a>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<a href="{% static 'assets/img/portfolio/details/4.jpg' %}" class="fancybox">
+										<img src="{% static 'assets/img/portfolio/details/4.jpg' %}" alt="Project Image" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+{% endblock %}

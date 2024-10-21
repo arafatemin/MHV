@@ -1,0 +1,107 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+    {#    <section class="service-area  light-bg section-padding clearfix" id="service">#}
+    <section class="service-area bg-color-1 section-padding" id="service">
+        <div class="container">
+            <div class="text-center text-justify flex-container col-md-12">
+                <div class="row justify-content-center">
+                    <div class="col-xs-12">
+                        <div class="section-title text-center mb-60">
+                            <h2 class="mb-20" style="color: black; font-family: 'Arial Rounded MT Bold'">ACADEMIC</h2>
+                            <div class="horizontal-line">
+                                <div class="top"></div>
+                                <div class="bottom"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mobile-mb-30 col-md-4" style="display: flex; align-items: stretch;">
+                        <a style="text-decoration: none; width: 100%;" target="_blank"
+                           href="https://scholar.google.com/citations?user=ppxyGvcAAAAJ&hl=tr&oi=ao">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                                <i class="zmdi zmdi-graduation-cap"></i>
+                                <h5 class="montserrat weight-medium no-margin" style="color: black; font-family: 'Arial Rounded MT Bold'">Publications</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">Selected scientific <br> papers published to date.
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mobile-mb-30 col-md-4" style="display: flex; align-items: stretch; background-color: silver;">
+                        <a style="text-decoration: none; width: 100%;" target="_blank" href="{% url 'books' %}">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                                <i class="zmdi zmdi-library"></i>
+                                <h5 class="montserrat weight-medium no-margin"  style="color: black; font-family: 'Arial Rounded MT Bold'">Books</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">The books and reports that <br> Dr Dursun Edited </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="mobile-mb-30 col-md-4" style="display: flex; align-items: stretch;">
+                        <a style="text-decoration: none; width: 100%;" href="{% url 'skill-page' %}">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; font-size: 65px">
+                                <i class="zmdi zmdi-memory"></i>
+                                <h5 class="montserrat weight-medium no-margin" style="color: black; font-family: 'Arial Rounded MT Bold'">Skills</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">Selected evidence based trainings
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="row">
+                    <div class="mobile-mb-30 col-xs-12 col-sm-4 col-md-4" style="display: flex; align-items: stretch;">
+                        <a style="text-decoration: none; width: 100%;" href="{% url 'membership' %}">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                                <i class="zmdi zmdi-accounts"></i>
+                                <h5 class="montserrat weight-medium no-margin" style="color: black; font-family: 'Arial Rounded MT Bold'">Membership</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">Selected memberships of organizations
+
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mobile-mb-30 col-md-4" style="display: flex; align-items: stretch; background-color: silver ">
+                        <a style="text-decoration: none; width: 100%;" href="{% url 'trainingConsulting' %}">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                                <i class="zmdi zmdi-memory"></i>
+                                <h5 class="montserrat weight-medium no-margin" style="color: black; font-family: 'Arial Rounded MT Bold'">Training & Consulting</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">Training & Consulting
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="mobile-mb-30 col-md-4" style="display: flex; align-items: stretch;">
+                        <a style="text-decoration: none; width: 100%;" href="{% url 'honoursAwards' %}">
+                            <div class="single-service pt-50 pb-60 plr-20 text-center"
+                                 style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; align-items: center;">
+                                <i class="zmdi zmdi-memory"></i>
+                                <h5 class="montserrat weight-medium no-margin" style="color: black; font-family: 'Arial Rounded MT Bold'">Honours & Awards</h5>
+                                <hr class="mtb-15"/>
+                                <p style="color: black; font-family: 'Arial Rounded MT Bold'">Honours and Awards received
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+{% endblock %}

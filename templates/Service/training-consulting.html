@@ -1,0 +1,30 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="portfolio-details-area light-bg section-padding">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="section-title text-center mb-60">
+                <h2 class="mb-20">Training & Consulting</h2>
+                <div class="horizontal-line">
+                    <div class="top"></div>
+                    <div class="bottom"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% for skill in trainingConsultings %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12">
+                        <div class="portfolio-description single-post text-justify">
+                            <h3 class=" montserrat weight-medium capitalize">{{ skill.description|safe }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <hr/>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
